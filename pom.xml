@@ -16,6 +16,8 @@
     <modules>
         <module>mall-category</module>
         <module>mall-gateway</module>
+        <module>mall-usr</module>
+        <module>mall-user</module>
     </modules>
     <name>mall-parent</name>
     <description>Demo project for Spring Boot</description>
