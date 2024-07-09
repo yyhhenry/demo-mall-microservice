@@ -1,0 +1,17 @@
+server:
+    address: localhost
+    port: 8081
+
+spring:
+    application:
+        name: mall-category
+    datasource:
+        url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    cloud:
+        nacos:
+            discovery:
+                server-addr: localhost:8848
+                ip: ${EXTERNAL_IP:127.0.0.1}
