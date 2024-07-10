@@ -1,4 +1,4 @@
-# mall-parent
+# demo-mall-microservice
 
 项目实训：微服务示例项目
 
