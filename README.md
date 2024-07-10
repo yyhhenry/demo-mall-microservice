@@ -5,3 +5,5 @@
 主要展示微服务结构的pom文件，以及各个模块的pom文件，展示基本的Spring Boot Web项目结构。
 
 无实际业务逻辑，仅作为示例项目。
+
+前端见 <https://github.com/yyhhenry/demo-mall-frontend>
