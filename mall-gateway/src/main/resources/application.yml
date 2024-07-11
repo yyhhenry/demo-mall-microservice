@@ -1,31 +1,29 @@
 server:
-    port: 8080
+  port: 8080
 
 spring:
-    main:
-        web-application-type: reactive
+  main:
+    web-application-type: reactive
 
-    application:
-        name: mall-gateway
+  application:
+    name: mall-gateway
 
-    cloud:
-        nacos:
-            discovery:
-                server-addr: localhost:8848 
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 
-        gateway:
-            discovery:
-                locator:
-                    enabled: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
 
-            routes:
-                -   
-                    id: mall-category
-                    uri: http://localhost:8081
-                    predicates:
-                        - Path=/api/category/**
-                -   
-                    id: mall-user
-                    uri: http://localhost:8082
-                    predicates:
-                        - Path=/api/user/**
+      routes:
+        - id: mall-category
+          uri: lb://mall-category
+          predicates:
+            - Path=/api/category/**
+        - id: mall-user
+          uri: lb://mall-user
+          predicates:
+            - Path=/api/user/**
